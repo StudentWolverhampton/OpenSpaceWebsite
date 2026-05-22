@@ -1,0 +1,114 @@
+.titlebar {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  -webkit-app-region: drag;
+  z-index: 10;
+}
+
+.titlebar-drag-region {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: var(--space-3);
+}
+
+.traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-right: var(--space-3);
+  -webkit-app-region: no-drag;
+}
+
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.traffic-light:hover {
+  opacity: 0.8;
+}
+
+.traffic-light.close { background: #ff5f57; }
+.traffic-light.minimize { background: #febc2e; }
+.traffic-light.maximize { background: #28c840; }
+
+.titlebar-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titlebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.titlebar-logo:hover {
+  color: var(--accent);
+}
+
+.titlebar-logo svg path {
+  transition: stroke var(--transition-fast);
+}
+
+.titlebar-logo:hover svg path {
+  stroke: var(--accent);
+}
+
+.titlebar-title {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.window-controls {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+
+.window-control {
+  width: 36px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.window-control:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.window-control.minimize:hover {
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.window-control.maximize:hover {
+  box-shadow: inset 0 -2px 0 var(--success);
+}
+
+.window-control.close:hover {
+  background: var(--error);
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}

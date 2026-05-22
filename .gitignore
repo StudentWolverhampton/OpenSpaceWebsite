@@ -1,0 +1,16 @@
+node_modules/
+out/
+dist/
+
+.openspace/
+.opencode/
+.playwright-mcp/
+website/.astro/
+website/dist/
+website/node_modules/
+
+*.log
+.env
+.DS_Store
+Thumbs.db
+*.zip

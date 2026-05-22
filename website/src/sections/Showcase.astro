@@ -1,0 +1,54 @@
+<section class="relative bg-surface px-6 py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal mx-auto mb-16 max-w-2xl text-center">
+      <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-accent">Showcase</span>
+      <h2 class="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+        See it in action
+      </h2>
+      <p class="text-lg leading-relaxed text-muted">
+        A clean, modern interface that puts your work front and center.
+      </p>
+    </div>
+
+    <div class="reveal relative">
+      <div class="relative mx-auto max-w-5xl">
+        <div class="overflow-hidden rounded-2xl border border-border shadow-2xl shadow-blue-500/10">
+          <div class="gradient-bg flex items-center gap-2 px-5 py-3.5">
+            <div class="h-3 w-3 rounded-full bg-white/30"></div>
+            <div class="h-3 w-3 rounded-full bg-white/30"></div>
+            <div class="h-3 w-3 rounded-full bg-white/30"></div>
+            <span class="ml-3 text-sm font-medium text-white/70">OpenSpace — premium terminal</span>
+          </div>
+          <div class="aspect-video bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 flex items-center justify-center">
+            <div class="text-center">
+              <div class="mb-6 inline-flex items-center gap-2 rounded-xl bg-white/10 px-6 py-3">
+                <span class="font-mono text-lg text-emerald-400">&gt;</span>
+                <span class="font-mono text-lg text-white/90">npm run dev</span>
+              </div>
+              <div class="space-y-2 font-mono text-sm">
+                <p class="text-emerald-400/70">$ <span class="text-white/80">Starting development server...</span></p>
+                <p class="text-emerald-400/70">$ <span class="text-white/80">ready in</span> <span class="text-amber-400">321ms</span></p>
+                <p class="text-emerald-400/70">$ <span class="text-cyan-400">http://localhost:5173</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
