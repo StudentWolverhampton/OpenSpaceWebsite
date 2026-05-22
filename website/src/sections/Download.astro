@@ -1,59 +1,96 @@
-<section id="download" class="relative border-t border-border px-6 py-24 sm:py-32">
+<section id="download" class="relative border-t border-border px-6 py-28 sm:py-36">
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(245,158,11,0.04), transparent);"></div>
+  <div class="orb top-[30%] left-[40%] h-[300px] w-[300px] bg-ember animate-pulse-amber" style="opacity: 0.05;"></div>
+
   <div class="relative z-10 mx-auto max-w-4xl">
-    <div class="reveal mx-auto mb-16 max-w-2xl text-center">
-      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cyber">Download</span>
-      <h2 class="mb-4 text-3xl font-bold tracking-tight font-display sm:text-4xl md:text-5xl">
-        Start building<br class="sm:hidden" />
-        <span class="text-gradient-cyber">for free</span>
+    <div class="reveal mb-16 text-center">
+      <span class="mb-4 inline-block font-mono text-xs font-medium uppercase tracking-[0.15em] text-ember">Download</span>
+      <h2 class="mb-5 text-3xl font-light tracking-tight sm:text-4xl md:text-5xl">
+        <span class="font-serif italic text-foreground">Start building</span><br />
+        <span class="text-ember-gradient font-semibold">today</span>
       </h2>
-      <p class="text-base leading-relaxed text-muted sm:text-lg">
-        OpenSpace is free and open-source. Get started in minutes.
+      <p class="mx-auto max-w-lg text-base leading-relaxed text-muted sm:text-lg">
+        Free and open-source. No account required. Just download and start working.
       </p>
     </div>
 
-    <div class="reveal mx-auto max-w-sm">
-      <div class="rounded-2xl border border-border bg-card p-6 transition-all hover:border-cyber/20 glow-cyber">
-        <div class="mb-6 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyber/10">
-              <svg class="h-5 w-5 text-cyber" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold font-display">Windows</h3>
-              <p class="text-xs text-muted">Windows 10 & 11, 64-bit</p>
-            </div>
+    <div class="reveal grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="card-glass group relative rounded-xl p-6">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-ember/10 transition-all duration-300 group-hover:bg-ember/15">
+            <svg class="h-5 w-5 text-ember" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
           </div>
-          <span class="rounded-md border border-border bg-dark px-3 py-1 font-mono text-xs text-muted">v1.0.0</span>
+          <span class="rounded-md bg-night px-2.5 py-1 font-mono text-[10px] text-muted">v1.0.0</span>
         </div>
-
-        <a
-          href="https://github.com/StudentWolverhampton/OpenSpaceWebsite/releases/latest/download/OpenSpace-Setup-1.0.0.exe"
-          class="group relative mx-auto flex w-fit items-center justify-center gap-1.5 overflow-hidden rounded-lg bg-cyber px-3 py-1.5 text-xs font-semibold text-deep transition-all hover:bg-cyber-dark hover:shadow-[0_0_20px_rgba(34,211,238,0.25)] hover:scale-[1.02] active:scale-[0.98]"
-        >
-          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-          </svg>
-          ↓ Download Installer ↓
+        <h3 class="mb-1 text-lg font-semibold">Windows</h3>
+        <p class="mb-5 text-xs text-muted">Windows 10 & 11, 64-bit</p>
+        <a href="https://github.com/StudentWolverhampton/OpenSpaceWebsite/releases/latest/download/OpenSpace-Setup-1.0.0.exe" class="btn-primary relative inline-flex w-full items-center justify-center gap-2 rounded-lg py-3 text-sm">
+          <span class="flex items-center gap-2">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            Download
+          </span>
         </a>
-
-        <div class="mt-4 flex items-center justify-center gap-4 text-xs text-subtle">
-          <span>Version 1.0.0</span>
-          <span class="h-1 w-1 rounded-full bg-border"></span>
+        <div class="mt-4 flex items-center justify-center gap-3 text-[11px] text-subtle">
           <span>~60 MB</span>
           <span class="h-1 w-1 rounded-full bg-border"></span>
-          <span>Open-Source</span>
+          <span>NSIS Installer</span>
+        </div>
+      </div>
+
+      <div class="card-glass group relative rounded-xl p-6">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-ember/10 transition-all duration-300 group-hover:bg-ember/15">
+            <svg class="h-5 w-5 text-ember" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </div>
+          <span class="rounded-md bg-night px-2.5 py-1 font-mono text-[10px] text-muted">soon</span>
+        </div>
+        <h3 class="mb-1 text-lg font-semibold">macOS</h3>
+        <p class="mb-5 text-xs text-muted">macOS 12+, Universal</p>
+        <button disabled class="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-border/50 bg-night/30 py-3 text-sm font-semibold text-subtle/50">
+          Coming Soon
+        </button>
+        <div class="mt-4 flex items-center justify-center gap-3 text-[11px] text-subtle">
+          <span>~45 MB</span>
+          <span class="h-1 w-1 rounded-full bg-border"></span>
+          <span>DMG</span>
+        </div>
+      </div>
+
+      <div class="card-glass group relative rounded-xl p-6 sm:col-span-2 lg:col-span-1">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-ember/10 transition-all duration-300 group-hover:bg-ember/15">
+            <svg class="h-5 w-5 text-ember" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.715 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.399.865.268 1.585.798 1.87 1.48.123.296.17.622.135.946-.035.325-.155.636-.327.922-.172.286-.393.545-.593.773-.2.228-.374.43-.496.616-.122.187-.19.35-.19.531 0 .182.068.365.19.551.122.187.296.389.496.616.2.228.421.487.593.773.172.286.292.597.327.922.035.325-.012.65-.135.946-.285.682-1.005 1.212-1.87 1.48-.864.264-1.964.329-2.774.529-.405.131-.766.267-.94.601-.174.339-.143.804.106 1.484.076.242.018.571-.04.97-.028.136-.055.337-.055.536a1.512 1.512 0 00.132.602c.206.411.551.544.864.68.312.133.598.2.797.4.213.239.403.571.663.839a.424.424 0 00.11.135c-.123.805.009 1.657.287 2.489.588 1.771 1.83 3.47 2.715 4.521.75 1.067.974 1.928 1.05 3.02.065 1.491-1.056 5.966 3.17 6.298.165.013.325.021.48.021z"/>
+            </svg>
+          </div>
+          <span class="rounded-md bg-night px-2.5 py-1 font-mono text-[10px] text-muted">soon</span>
+        </div>
+        <h3 class="mb-1 text-lg font-semibold">Linux</h3>
+        <p class="mb-5 text-xs text-muted">AppImage, x86_64</p>
+        <button disabled class="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-border/50 bg-night/30 py-3 text-sm font-semibold text-subtle/50">
+          Coming Soon
+        </button>
+        <div class="mt-4 flex items-center justify-center gap-3 text-[11px] text-subtle">
+          <span>~55 MB</span>
+          <span class="h-1 w-1 rounded-full bg-border"></span>
+          <span>AppImage</span>
         </div>
       </div>
     </div>
+
+    <div class="reveal mt-12 text-center">
+      <p class="text-sm text-muted">
+        Open-source under MIT License. 
+        <a href="https://github.com/StudentWolverhampton/OpenSpaceWebsite" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-ember underline underline-offset-4 decoration-border hover:decoration-ember/30">
+          View on GitHub
+        </a>
+      </p>
+    </div>
   </div>
 </section>
-
-<script>
-  const observer = new IntersectionObserver(
-    (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
-    { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
-  );
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-</script>

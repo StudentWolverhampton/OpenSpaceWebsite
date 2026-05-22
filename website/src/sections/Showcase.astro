@@ -1,54 +1,64 @@
-<section id="showcase" class="relative border-t border-border px-6 py-24 sm:py-32">
+<section id="showcase" class="relative border-t border-border px-6 py-28 sm:py-36">
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 40% at 30% 50%, rgba(245,158,11,0.03), transparent);"></div>
+
   <div class="relative z-10 mx-auto max-w-7xl">
-    <div class="reveal mb-16 max-w-xl">
-      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cyber">Showcase</span>
-      <h2 class="mb-4 text-3xl font-bold tracking-tight font-display sm:text-4xl md:text-5xl">
-        See it in <span class="text-gradient-cyber">action</span>
+    <div class="reveal mb-16 max-w-2xl">
+      <span class="mb-4 inline-block font-mono text-xs font-medium uppercase tracking-[0.15em] text-ember">Showcase</span>
+      <h2 class="mb-5 text-3xl font-light tracking-tight sm:text-4xl md:text-5xl">
+        <span class="font-serif italic text-foreground">See it</span><br />
+        <span class="text-ember-gradient font-semibold">in action</span>
       </h2>
       <p class="text-base leading-relaxed text-muted sm:text-lg">
-        A clean, modern interface that puts your work front and center.
+        A clean interface that puts your work front and center.
       </p>
     </div>
 
     <div class="reveal-scale">
-      <div class="overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-cyber/5">
-        <div class="flex items-center gap-2 border-b border-border px-5 py-3">
-          <div class="h-2.5 w-2.5 rounded-full bg-red-500/50"></div>
-          <div class="h-2.5 w-2.5 rounded-full bg-amber-500/50"></div>
-          <div class="h-2.5 w-2.5 rounded-full bg-green-500/50"></div>
-          <div class="ml-3 flex items-center gap-3">
-            <span class="font-mono text-xs text-muted">OpenSpace</span>
-            <div class="flex gap-2">
-              <button data-tab="workspace" class="tab-btn active rounded-md border border-cyber/20 bg-cyber/10 px-3 py-1 font-mono text-[11px] text-cyber transition-all hover:bg-cyber/20">~/workspace</button>
-              <button data-tab="menu" class="tab-btn rounded-md border border-border bg-dark px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-cyber/20 hover:text-cyber">~/projects</button>
+      <div class="relative overflow-hidden rounded-2xl border border-border bg-surface/50 glow-amber backdrop-blur-xl">
+        <div class="flex items-center gap-3 border-b border-border px-5 py-3.5">
+          <div class="flex gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-red-500/50"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-amber-500/50"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-green-500/50"></span>
+          </div>
+          <div class="flex-1">
+            <div class="mx-auto flex max-w-md items-center gap-2 rounded-lg border border-border bg-night/80 px-3 py-1.5">
+              <svg class="h-3 w-3 text-subtle" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+              </svg>
+              <span class="font-mono text-[11px] text-muted">openspace.dev</span>
             </div>
           </div>
+          <button class="rounded-md p-1.5 text-muted transition-colors hover:text-foreground">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.864a8.25 8.25 0 0113.803-3.7l3.181 3.182" /></svg>
+          </button>
+        </div>
+
+        <div class="flex gap-2 border-b border-border px-5 py-2.5">
+          <button data-tab="workspace" class="tab-btn active rounded-md border border-ember/20 bg-ember/10 px-3 py-1.5 font-mono text-[11px] text-ember transition-all hover:bg-ember/15">~/workspace</button>
+          <button data-tab="browser" class="tab-btn rounded-md border border-border bg-night/30 px-3 py-1.5 font-mono text-[11px] text-muted transition-all hover:border-ember/10 hover:text-ember">browser</button>
         </div>
 
         <div id="tab-workspace" class="tab-content block">
           <img src="/images/workspace.png" alt="OpenSpace terminal workspace" class="w-full" loading="lazy" />
         </div>
-        <div id="tab-menu" class="tab-content hidden">
-          <img src="/images/menu.png" alt="OpenSpace project list" class="w-full" loading="lazy" />
+        <div id="tab-browser" class="tab-content hidden">
+          <img src="/images/menu.png" alt="OpenSpace browser panel" class="w-full" loading="lazy" />
         </div>
+
+        <div class="pointer-events-none absolute -inset-px rounded-2xl" style="box-shadow: 0 0 60px rgba(245,158,11,0.03), inset 0 1px 0 rgba(245,158,11,0.05);"></div>
       </div>
     </div>
   </div>
 </section>
 
 <script>
-  const observer = new IntersectionObserver(
-    (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
-    { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
-  );
-  document.querySelectorAll('.reveal, .reveal-scale').forEach((el) => observer.observe(el));
-
   document.querySelectorAll('.tab-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach((b) => {
-        b.className = 'tab-btn rounded-md border border-border bg-dark px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-cyber/20 hover:text-cyber';
+        b.className = 'tab-btn rounded-md border border-border bg-night/30 px-3 py-1.5 font-mono text-[11px] text-muted transition-all hover:border-ember/10 hover:text-ember';
       });
-      btn.className = 'tab-btn active rounded-md border border-cyber/20 bg-cyber/10 px-3 py-1 font-mono text-[11px] text-cyber transition-all hover:bg-cyber/20';
+      btn.className = 'tab-btn active rounded-md border border-ember/20 bg-ember/10 px-3 py-1.5 font-mono text-[11px] text-ember transition-all hover:bg-ember/15';
       document.querySelectorAll('.tab-content').forEach((c) => c.classList.add('hidden'));
       document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
     });
