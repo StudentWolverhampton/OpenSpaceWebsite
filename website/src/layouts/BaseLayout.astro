@@ -32,9 +32,9 @@ const { title = 'OpenSpace — Terminal Workspace', description = 'A premium, op
         --color-dark: #050505;
         --color-surface: #0a0a0a;
         --color-card: #0f0f0f;
-        --color-ember: #FB6D3A;
-        --color-ember-dark: #E04F1A;
-        --color-ember-light: #FF8A5C;
+        --color-cyber: #22d3ee;
+        --color-cyber-dark: #0891b2;
+        --color-cyber-light: #67e8f9;
         --color-foreground: #f0f0f0;
         --color-muted: #888888;
         --color-subtle: #555555;
@@ -51,26 +51,19 @@ const { title = 'OpenSpace — Terminal Workspace', description = 'A premium, op
       }
 
       ::selection {
-        background: rgba(251, 109, 58, 0.3);
+        background: rgba(34, 211, 238, 0.3);
         color: #fff;
       }
 
-      .glow-ember {
-        box-shadow: 0 0 30px rgba(251, 109, 58, 0.08), 0 0 60px rgba(251, 109, 58, 0.04);
+      .glow-cyber {
+        box-shadow: 0 0 30px rgba(34, 211, 238, 0.08), 0 0 60px rgba(34, 211, 238, 0.04);
       }
 
-      .text-gradient-ember {
-        background: linear-gradient(135deg, #FB6D3A, #FF8A5C, #E04F1A);
+      .text-gradient-cyber {
+        background: linear-gradient(135deg, #22d3ee, #06b6d4, #0891b2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-      }
-
-      .bg-grid {
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        background-size: 64px 64px;
       }
 
       .card-hover {
@@ -109,36 +102,19 @@ const { title = 'OpenSpace — Terminal Workspace', description = 'A premium, op
         from { opacity: 0; }
         to { opacity: 1; }
       }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      @keyframes pulse-ember {
-        0%, 100% { box-shadow: 0 0 20px rgba(251, 109, 58, 0); }
-        50% { box-shadow: 0 0 30px rgba(251, 109, 58, 0.15); }
+      @keyframes pulse-cyber {
+        0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0); }
+        50% { box-shadow: 0 0 30px rgba(34, 211, 238, 0.15); }
       }
 
       .animate-fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
       .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
-      .animate-blink { animation: blink 1s step-end infinite; }
-      .animate-pulse-ember { animation: pulse-ember 3s ease-in-out infinite; }
+      .animate-pulse-cyber { animation: pulse-cyber 3s ease-in-out infinite; }
       .stagger-0 { animation-delay: 0s; }
       .stagger-1 { animation-delay: 0.15s; }
       .stagger-2 { animation-delay: 0.3s; }
       .stagger-3 { animation-delay: 0.45s; }
       .stagger-4 { animation-delay: 0.6s; }
-
-      .watermark {
-        position: absolute;
-        font-family: var(--font-display);
-        font-weight: 800;
-        font-size: clamp(10rem, 25vw, 22rem);
-        color: rgba(255, 255, 255, 0.02);
-        line-height: 1;
-        pointer-events: none;
-        user-select: none;
-        letter-spacing: -0.04em;
-      }
     </style>
   </head>
   <body class="bg-deep text-foreground antialiased">

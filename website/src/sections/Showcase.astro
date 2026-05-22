@@ -1,12 +1,11 @@
 <section id="showcase" class="relative border-t border-border px-6 py-24 sm:py-32">
-  <div class="absolute inset-0 bg-grid opacity-20"></div>
-  <div class="absolute right-0 top-0 h-[1px] w-1/3 bg-gradient-to-l from-ember/40 to-transparent"></div>
+  <div class="absolute left-0 top-0 h-px w-1/3 bg-gradient-to-r from-cyber/40 to-transparent"></div>
 
   <div class="relative z-10 mx-auto max-w-7xl">
     <div class="reveal mb-16 max-w-xl">
-      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-ember">Showcase</span>
+      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cyber">Showcase</span>
       <h2 class="mb-4 text-3xl font-bold tracking-tight font-display sm:text-4xl md:text-5xl">
-        See it in <span class="text-gradient-ember">action</span>
+        See it in <span class="text-gradient-cyber">action</span>
       </h2>
       <p class="text-base leading-relaxed text-muted sm:text-lg">
         A clean, modern interface that puts your work front and center.
@@ -14,7 +13,7 @@
     </div>
 
     <div class="reveal-scale">
-      <div class="overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-ember/5">
+      <div class="overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-cyber/5">
         <div class="flex items-center gap-2 border-b border-border px-5 py-3">
           <div class="h-2.5 w-2.5 rounded-full bg-red-500/50"></div>
           <div class="h-2.5 w-2.5 rounded-full bg-amber-500/50"></div>
@@ -22,8 +21,8 @@
           <div class="ml-3 flex items-center gap-3">
             <span class="font-mono text-xs text-muted">OpenSpace</span>
             <div class="flex gap-2">
-              <button data-tab="workspace" class="tab-btn active rounded-md border border-ember/20 bg-ember/10 px-3 py-1 font-mono text-[11px] text-ember transition-all hover:bg-ember/20">~/workspace</button>
-              <button data-tab="menu" class="tab-btn rounded-md border border-border bg-dark px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-ember/20 hover:text-ember">~/projects</button>
+              <button data-tab="workspace" class="tab-btn active rounded-md border border-cyber/20 bg-cyber/10 px-3 py-1 font-mono text-[11px] text-cyber transition-all hover:bg-cyber/20">~/workspace</button>
+              <button data-tab="menu" class="tab-btn rounded-md border border-border bg-dark px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-cyber/20 hover:text-cyber">~/projects</button>
             </div>
           </div>
         </div>
@@ -49,9 +48,9 @@
   document.querySelectorAll('.tab-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach((b) => {
-        b.className = 'tab-btn rounded-md border border-border bg-dark px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-ember/20 hover:text-ember';
+        b.className = 'tab-btn rounded-md border border-border bg-dark px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-cyber/20 hover:text-cyber';
       });
-      btn.className = 'tab-btn active rounded-md border border-ember/20 bg-ember/10 px-3 py-1 font-mono text-[11px] text-ember transition-all hover:bg-ember/20';
+      btn.className = 'tab-btn active rounded-md border border-cyber/20 bg-cyber/10 px-3 py-1 font-mono text-[11px] text-cyber transition-all hover:bg-cyber/20';
       document.querySelectorAll('.tab-content').forEach((c) => c.classList.add('hidden'));
       document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
     });
