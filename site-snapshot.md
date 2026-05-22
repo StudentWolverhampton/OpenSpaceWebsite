@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "OS OpenSpace" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: OS
+        - generic [ref=e6]: OpenSpace
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Features" [ref=e9] [cursor=pointer]:
+            - /url: "#features"
+          - link "Download" [ref=e10] [cursor=pointer]:
+            - /url: "#download"
+        - link "Get Started" [ref=e11] [cursor=pointer]:
+          - /url: "#download"
+  - generic [ref=e14]:
+    - generic [ref=e16]: Now available for Windows
+    - heading "Terminal Workspace. Reimagined." [level=1] [ref=e18]:
+      - text: Terminal Workspace.
+      - text: Reimagined.
+    - paragraph [ref=e19]: A premium, open-source terminal workspace for developers who demand more. Multiple terminals, built-in browser, and beautiful design — all in one place.
+    - generic [ref=e20]:
+      - link "Download Free v1.0.0" [ref=e21] [cursor=pointer]:
+        - /url: "#download"
+        - img [ref=e22]
+        - text: Download Free
+        - generic [ref=e24]: v1.0.0
+      - link "Learn More" [ref=e25] [cursor=pointer]:
+        - /url: "#features"
+        - text: Learn More
+        - img [ref=e26]
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]: Features
+      - heading "Everything a developer needs" [level=2] [ref=e33]
+      - paragraph [ref=e34]: OpenSpace combines powerful terminal features with a beautiful, distraction-free interface.
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e38]
+        - heading "Multi-Terminal" [level=3] [ref=e40]
+        - paragraph [ref=e41]: Run up to 8 terminals in a flexible grid layout. Shell, opencode, or Claude — all at your fingertips.
+      - generic [ref=e42]:
+        - img [ref=e44]
+        - heading "Project Workspaces" [level=3] [ref=e46]
+        - paragraph [ref=e47]: Each project has its own terminals and layout. Switch between projects seamlessly with zero setup.
+      - generic [ref=e48]:
+        - img [ref=e50]
+        - heading "Built-in Browser" [level=3] [ref=e52]
+        - paragraph [ref=e53]: Embedded webview panel with full navigation. Resize it, browse docs, preview apps — no context switching.
+      - generic [ref=e54]:
+        - img [ref=e56]
+        - heading "Keyboard First" [level=3] [ref=e58]
+        - paragraph [ref=e59]: Full keyboard shortcut support. Ctrl+Shift+T for new terminal, Ctrl+Tab to cycle, F11 for fullscreen.
+  - generic [ref=e61]:
+    - generic [ref=e62]:
+      - generic [ref=e63]: Showcase
+      - heading "See it in action" [level=2] [ref=e64]
+      - paragraph [ref=e65]: A clean, modern interface that puts your work front and center.
+    - generic [ref=e68]:
+      - generic [ref=e73]: OpenSpace — premium terminal
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]: ">"
+          - generic [ref=e78]: npm run dev
+        - generic [ref=e79]:
+          - paragraph [ref=e80]: $ Starting development server...
+          - paragraph [ref=e81]: $ ready in 321ms
+          - paragraph [ref=e82]: $ http://localhost:5173
+  - generic [ref=e84]:
+    - generic [ref=e85]:
+      - generic [ref=e86]: Download
+      - heading "Get started for free" [level=2] [ref=e87]
+      - paragraph [ref=e88]: OpenSpace is free. Download the installer and start building.
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - heading "Windows" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Windows 10 & 11, 64-bit
+        - img [ref=e96]
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - img [ref=e100]
+          - generic [ref=e102]: NSIS installer — custom install directory
+        - generic [ref=e103]:
+          - img [ref=e104]
+          - generic [ref=e106]: Electron 33 based — fast & secure
+        - generic [ref=e107]:
+          - img [ref=e108]
+          - generic [ref=e110]: Auto-updates coming soon
+      - link "Download Installer" [ref=e111] [cursor=pointer]:
+        - /url: /installers/OpenSpace%20Setup%201.0.0.exe
+        - img [ref=e112]
+        - text: Download Installer
+      - generic [ref=e114]: Version 1.0.0 · ~60 MB · Open-source
+  - contentinfo [ref=e115]:
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - generic [ref=e119]: OS
+        - generic [ref=e120]: OpenSpace
+      - generic [ref=e121]:
+        - link "GitHub" [ref=e122] [cursor=pointer]:
+          - /url: "#"
+        - link "Documentation" [ref=e123] [cursor=pointer]:
+          - /url: "#"
+        - link "Support" [ref=e124] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=e125]: © 2026 OpenSpace

@@ -4,11 +4,11 @@ interface Props {
   description?: string;
 }
 
-const { title = 'OpenSpace — Premium Terminal Workspace', description = 'A beautiful, modern terminal workspace for developers. Open-source and free.' } = Astro.props;
+const { title = 'OpenSpace — Terminal Workspace', description = 'A premium, open-source terminal workspace for developers. Multiple terminals, built-in browser, keyboard-first design.' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,93 +17,136 @@ const { title = 'OpenSpace — Premium Terminal Workspace', description = 'A bea
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/images/icon.png" />
 
     <style>
       @import "tailwindcss";
 
       @theme {
-        --font-sans: 'Inter', system-ui, sans-serif;
+        --font-display: 'Syne', sans-serif;
+        --font-sans: 'Plus Jakarta Sans', sans-serif;
         --font-mono: 'JetBrains Mono', monospace;
-        --color-accent: #2563eb;
-        --color-accent-dark: #1d4ed8;
-        --color-accent-light: #3b82f6;
-        --color-deep: #0f172a;
-        --color-surface: #f8fafc;
-        --color-border: #e2e8f0;
-        --color-muted: #64748b;
-      }
 
-      html {
-        scroll-behavior: smooth;
+        --color-space: #070b19;
+        --color-space-light: #0d1525;
+        --color-surface: rgba(17, 27, 46, 0.7);
+        --color-cyber: #22d3ee;
+        --color-cyber-dark: #0891b2;
+        --color-amber: #f59e0b;
+        --color-amber-dark: #d97706;
+        --color-foreground: #e2e8f0;
+        --color-muted: #8892b0;
+        --color-border: rgba(34, 211, 238, 0.08);
+        --color-border-hover: rgba(34, 211, 238, 0.2);
       }
 
       body {
+        background: var(--color-space);
+        color: var(--color-foreground);
         font-family: var(--font-sans);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
 
-      .gradient-text {
-        background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed);
+      ::selection {
+        background: rgba(34, 211, 238, 0.3);
+        color: #fff;
+      }
+
+      .glow-cyan {
+        box-shadow: 0 0 25px rgba(34, 211, 238, 0.12), 0 0 60px rgba(34, 211, 238, 0.06);
+      }
+
+      .glow-amber {
+        box-shadow: 0 0 25px rgba(245, 158, 11, 0.15), 0 0 60px rgba(245, 158, 11, 0.06);
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #22d3ee, #06b6d4, #0891b2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
 
-      .gradient-bg {
-        background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+      .text-gradient-amber {
+        background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
-      .gradient-hero {
-        background:
-          radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.15), transparent),
-          radial-gradient(ellipse 60% 40% at 30% 60%, rgba(79, 70, 229, 0.08), transparent),
-          radial-gradient(ellipse 50% 30% at 70% 80%, rgba(124, 58, 237, 0.06), transparent);
+      .bg-grid {
+        background-image:
+          linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
       }
 
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(24px); }
-        to { opacity: 1; transform: translateY(0); }
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+      .card-hover:hover {
+        transform: translateY(-4px);
+        border-color: var(--color-border-hover);
+        box-shadow: 0 8px 32px rgba(34, 211, 238, 0.08), 0 0 60px rgba(34, 211, 238, 0.04);
       }
-
-      @keyframes pulse-glow {
-        0%, 100% { opacity: 0.4; }
-        50% { opacity: 0.8; }
-      }
-
-      .animate-fade-in-up {
-        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-
-      .animate-fade-in {
-        animation: fadeIn 1s ease-out forwards;
-      }
-
-      .stagger-1 { animation-delay: 0.1s; }
-      .stagger-2 { animation-delay: 0.2s; }
-      .stagger-3 { animation-delay: 0.3s; }
-      .stagger-4 { animation-delay: 0.4s; }
 
       .reveal {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
         transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
-
       .reveal.visible {
         opacity: 1;
         transform: translateY(0);
       }
+      .reveal-scale {
+        opacity: 0;
+        transform: scale(0.92);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-scale.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.3); }
+        50% { box-shadow: 0 0 40px rgba(34, 211, 238, 0.5), 0 0 60px rgba(34, 211, 238, 0.2); }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+
+      .animate-fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+      .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+      .animate-float { animation: float 6s ease-in-out infinite; }
+      .stagger-0 { animation-delay: 0s; }
+      .stagger-1 { animation-delay: 0.15s; }
+      .stagger-2 { animation-delay: 0.3s; }
+      .stagger-3 { animation-delay: 0.45s; }
+      .stagger-4 { animation-delay: 0.6s; }
+
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
   </head>
-  <body class="bg-white text-deep antialiased">
+  <body class="bg-space antialiased">
     <slot />
   </body>
 </html>

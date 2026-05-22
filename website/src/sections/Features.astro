@@ -1,61 +1,76 @@
-<section id="features" class="relative border-b border-border bg-white px-6 py-24 sm:py-32">
-  <div class="mx-auto max-w-6xl">
-    <div class="reveal mx-auto mb-16 max-w-2xl text-center">
-      <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-accent">Features</span>
-      <h2 class="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-        Everything a developer needs
+<section id="features" class="relative border-b border-border px-6 py-24 sm:py-32">
+  <div class="absolute inset-0 bg-grid opacity-40"></div>
+  <div class="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-cyber/2 blur-3xl"></div>
+
+  <div class="relative z-10 mx-auto max-w-7xl">
+    <div class="reveal mx-auto mb-20 max-w-2xl text-center">
+      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cyber">Features</span>
+      <h2 class="mb-4 text-3xl font-bold tracking-tight font-display sm:text-4xl md:text-5xl">
+        Built for <span class="text-gradient">flow</span>
       </h2>
-      <p class="text-lg leading-relaxed text-muted">
-        OpenSpace combines powerful terminal features with a beautiful, distraction-free interface.
+      <p class="text-base leading-relaxed text-muted sm:text-lg">
+        Every feature designed to keep you in the zone. No distractions, just terminal.
       </p>
     </div>
 
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="reveal group rounded-2xl border border-border bg-white p-8 transition-all hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5">
-        <div class="gradient-bg mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-lg shadow-blue-500/20">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z" />
-          </svg>
+    <div class="grid gap-6 lg:grid-cols-3">
+      <div class="reveal card-hover group col-span-1 rounded-2xl border border-border bg-surface p-8 backdrop-blur-xl lg:col-span-2 lg:p-10">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-start">
+          <div class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-cyber/10 text-cyber">
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="mb-2 text-xl font-bold font-display">Multi-Terminal Grid</h3>
+            <p class="mb-4 leading-relaxed text-muted">
+              Run up to <span class="font-semibold text-foreground">8 terminals</span> in a flexible grid layout. 
+              Shell, opencode, or Claude — all at your fingertips. Drag to resize, 
+              close with Ctrl+W, spawn new with Ctrl+Shift+T.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-lg border border-cyber/15 bg-cyber/5 px-3 py-1 font-mono text-xs text-cyber">Ctrl+Shift+T</span>
+              <span class="rounded-lg border border-cyber/15 bg-cyber/5 px-3 py-1 font-mono text-xs text-cyber">Ctrl+W</span>
+              <span class="rounded-lg border border-cyber/15 bg-cyber/5 px-3 py-1 font-mono text-xs text-cyber">Ctrl+Tab</span>
+              <span class="rounded-lg border border-cyber/15 bg-cyber/5 px-3 py-1 font-mono text-xs text-cyber">F11</span>
+            </div>
+          </div>
         </div>
-        <h3 class="mb-2 text-lg font-bold">Multi-Terminal</h3>
-        <p class="text-sm leading-relaxed text-muted">
-          Run up to 8 terminals in a flexible grid layout. Shell, opencode, or Claude — all at your fingertips.
-        </p>
       </div>
 
-      <div class="reveal group rounded-2xl border border-border bg-white p-8 transition-all hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5">
-        <div class="gradient-bg mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-lg shadow-blue-500/20">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
-          </svg>
-        </div>
-        <h3 class="mb-2 text-lg font-bold">Project Workspaces</h3>
-        <p class="text-sm leading-relaxed text-muted">
-          Each project has its own terminals and layout. Switch between projects seamlessly with zero setup.
-        </p>
-      </div>
-
-      <div class="reveal group rounded-2xl border border-border bg-white p-8 transition-all hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5">
-        <div class="gradient-bg mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-lg shadow-blue-500/20">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <div class="reveal card-hover group rounded-2xl border border-border bg-surface p-8 backdrop-blur-xl">
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/10 text-amber">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
           </svg>
         </div>
-        <h3 class="mb-2 text-lg font-bold">Built-in Browser</h3>
+        <h3 class="mb-2 text-lg font-bold font-display">Built-in Browser</h3>
         <p class="text-sm leading-relaxed text-muted">
-          Embedded webview panel with full navigation. Resize it, browse docs, preview apps — no context switching.
+          Embedded webview panel with back/forward navigation. Resizable. Browse docs or preview your apps without leaving the terminal.
         </p>
       </div>
 
-      <div class="reveal group rounded-2xl border border-border bg-white p-8 transition-all hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5">
-        <div class="gradient-bg mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-lg shadow-blue-500/20">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+      <div class="reveal card-hover group rounded-2xl border border-border bg-surface p-8 backdrop-blur-xl">
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyber/10 text-cyber">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
           </svg>
         </div>
-        <h3 class="mb-2 text-lg font-bold">Keyboard First</h3>
+        <h3 class="mb-2 text-lg font-bold font-display">Project Workspaces</h3>
         <p class="text-sm leading-relaxed text-muted">
-          Full keyboard shortcut support. Ctrl+Shift+T for new terminal, Ctrl+Tab to cycle, F11 for fullscreen.
+          Each project keeps its own terminals, layout, and directory. Switch between them seamlessly with zero setup.
+        </p>
+      </div>
+
+      <div class="reveal card-hover group rounded-2xl border border-border bg-surface p-8 backdrop-blur-xl">
+        <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/10 text-amber">
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+          </svg>
+        </div>
+        <h3 class="mb-2 text-lg font-bold font-display">Keyboard First</h3>
+        <p class="text-sm leading-relaxed text-muted">
+          Every action has a shortcut. New terminal, close tab, cycle windows, toggle browser, fullscreen — never touch the mouse.
         </p>
       </div>
     </div>
@@ -64,15 +79,8 @@
 
 <script>
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+    { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
   );
-
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 </script>

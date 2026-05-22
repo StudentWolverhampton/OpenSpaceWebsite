@@ -1,25 +1,31 @@
-<nav class="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-white/80 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="flex items-center gap-2.5">
-      <div class="flex h-8 w-8 items-center justify-center rounded-lg gradient-bg text-xs font-bold text-white">
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-border bg-space/80 backdrop-blur-2xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <a href="/" class="group flex items-center gap-3">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-cyber/10 text-sm font-bold text-cyber transition-all group-hover:bg-cyber/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
         OS
       </div>
-      <span class="text-lg font-bold tracking-tight">OpenSpace</span>
+      <span class="text-lg font-bold tracking-tight font-display">
+        Open<span class="text-cyber">Space</span>
+      </span>
     </a>
     <div class="flex items-center gap-8">
       <div class="hidden items-center gap-8 sm:flex">
-        <a href="#features" class="text-sm font-medium text-muted transition-colors hover:text-deep">
+        <a href="#features" class="text-sm font-medium text-muted transition-all hover:text-cyber">
           Features
         </a>
-        <a href="#download" class="text-sm font-medium text-muted transition-colors hover:text-deep">
+        <a href="#showcase" class="text-sm font-medium text-muted transition-all hover:text-cyber">
+          Showcase
+        </a>
+        <a href="#download" class="text-sm font-medium text-muted transition-all hover:text-cyber">
           Download
         </a>
       </div>
       <a
         href="#download"
-        class="gradient-bg rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-blue-500/40 hover:scale-105 active:scale-95"
+        class="relative overflow-hidden rounded-xl bg-gradient-to-r from-cyber to-cyber-dark px-5 py-2.5 text-sm font-semibold text-space transition-all hover:shadow-[0_0_25px_rgba(34,211,238,0.35)] hover:scale-105 active:scale-95"
       >
-        Get Started
+        <span class="relative z-10">Get Started</span>
+        <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full"></div>
       </a>
     </div>
   </div>
